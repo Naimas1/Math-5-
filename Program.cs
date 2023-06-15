@@ -2,24 +2,25 @@
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Console.WriteLine("Введіть перше число:");
-        int number1 = int.Parse(Console.ReadLine());
+        Console.Write("Введіть число A: ");
+        int A = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Введіть друге число:");
-        int number2 = int.Parse(Console.ReadLine());
-        int start = Math.Min(number1, number2);
-        int end = Math.Max(number1, number2);
+        Console.Write("Введіть число B: ");
+        int B = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Парні числа у вказаному діапазоні:");
+        Console.WriteLine("Висновок:");
 
-        for (int i = start; i <= end; i++)
+        for (int i = A; i <= B; i++)
         {
-            if (i % 2 == 0)
+            for (int j = 0; j < i; j++)
             {
-                Console.WriteLine(i);
+                Console.Write(i + " ");
             }
+            Console.WriteLine();
         }
+
+        Console.ReadLine();
     }
 }
